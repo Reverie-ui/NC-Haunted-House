@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neurotically Content | The House</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loading">
+
+    <!-- BEGIN SCREEN -->
+    <section id="beginScreen" class="scene active">
+        <p class="small-title">NEUROTICALLY CONTENT PRESENTS</p>
+        <h1>THE HOUSE</h1>
+        <button id="beginButton">BEGIN</button>
+    </section>
+
+
+    <!-- WIDE PROPERTY SHOT -->
+    <section id="exteriorScene" class="scene image-scene">
+        <img
+            src="Images/house-exterior.png"
+            class="scene-image exterior-image"
+            alt="The House"
+        >
+    </section>
+
+
+    <!-- CLOSE ENTRANCE SHOT -->
+    <section id="entranceScene" class="scene image-scene">
+        <img
+            src="Images/house-entrance.png"
+            class="scene-image entrance-image"
+            alt="The entrance"
+        >
+    </section>
+
+
+    <!-- DARKNESS / WARNING -->
+    <section id="warningScene" class="scene">
+        <p id="warningText" class="warning-text"></p>
+    </section>
+
+
+    <!-- THE FOYER -->
+    <section id="foyerScene" class="scene">
+
+    <div class="foyer-stage">
+
+        <img
+            src="Images/foyer.png"
+            class="foyer-image"
+            alt="The Foyer"
+        >
+
+        <button
+            id="envelopeHotspot"
+            class="hotspot envelope-hotspot"
+            aria-label="Examine the sealed envelope">
+        </button>
+        <button
+            id="mirrorHotspot"
+            class="hotspot mirror-hotspot"
+            aria-label="Examine the mirror">
+        </button>
+        <button
+            id="clockHotspot"
+            class="hotspot clock-hotspot"
+            aria-label="Examine the grandfather clock">
+        </button>
+
+    </div>
+
+    <div id="foyerIntro" class="foyer-intro">
+        There is no going back now.
+    </div>
+
+
+<!-- Envelope inspection -->
+<div id="envelopeModal" class="inspection-modal">
+
+    <div class="inspection-card">
+
+        <button
+            id="closeEnvelope"
+            class="close-inspection"
+            aria-label="Close">
+            ×
+        </button>
+
+        <p class="inspection-label">A SEALED ENVELOPE</p>
+
+        <div class="wax-seal">H</div>
+
+        <p class="inspection-description">
+            The wax is still warm.
+        </p>
+
+        <button id="openEnvelope" class="inspect-action">
+            BREAK THE SEAL
+        </button>
+
+        <div id="foyerLetter" class="foyer-letter">
+
+            <p>Welcome.</p>
+
+            <p>
+                Four remained to watch the hours pass.<br>
+                One could no longer bear the sight.
+            </p>
+
+            <p>
+                See them as they saw themselves.
+            </p>
+
+            <p class="letter-ending">
+                The house remembers.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Mirror inspection -->
+<div id="mirrorModal" class="mirror-modal">
+
+    <img
+        src="Images/mirror-reflection.png"
+        class="mirror-reflection"
+        alt="A strange reflection in the mirror"
+    >
+
+    <button
+        id="closeMirror"
+        class="close-mirror"
+        aria-label="Close mirror">
+        ×
+    </button>
+
+</div>
+<!-- Clock inspection -->
+<div id="clockModal" class="clock-modal">
+
+    <div class="clock-puzzle">
+
+        <button
+            id="closeClock"
+            class="close-clock"
+            aria-label="Close clock">
+            ×
+        </button>
+
+        <p class="clock-label">THE GRANDFATHER CLOCK</p>
+
+        <div class="clock-face">
+
+            <div class="clock-number twelve">XII</div>
+            <div class="clock-number three">III</div>
+            <div class="clock-number six">VI</div>
+            <div class="clock-number nine">IX</div>
+
+            <div id="hourHand" class="clock-hand hour-hand"></div>
+            <div id="minuteHand" class="clock-hand minute-hand"></div>
+
+            <div class="clock-center"></div>
+
+        </div>
+
+        <div class="clock-controls">
+
+            <div>
+                <p>HOUR</p>
+                <button id="hourDown">−</button>
+                <span id="hourDisplay">12</span>
+                <button id="hourUp">+</button>
+            </div>
+
+            <div>
+                <p>MINUTE</p>
+                <button id="minuteDown">−</button>
+                <span id="minuteDisplay">00</span>
+                <button id="minuteUp">+</button>
+            </div>
+
+        </div>
+
+        <p id="clockMessage" class="clock-message">
+            The hands resist you.
+        </p>
+        <div id="clockCompartment" class="clock-compartment">
+
+    <p class="compartment-text">
+        A narrow panel beneath the clock face releases.
+    </p>
+
+    <button id="openCompartment" class="compartment-button">
+        OPEN COMPARTMENT
+    </button>
+
+    <div id="clockFragment" class="clock-fragment">
+
+        <p class="fragment-label">
+            THREE LETTERS HAVE BEEN CARVED INTO THE WOOD.
+        </p>
+
+        <p class="fragment-word">
+            CTS
+        </p>
+
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+</section> <!-- foyerScene -->
+
+<!-- CHAPTER ONE COMPLETE -->
+<section id="chapterOneComplete" class="scene chapter-complete">
+
+    <div class="chapter-complete-content">
+
+        <p class="chapter-heading">
+            CONGRATULATIONS
+        </p>
+
+        <p class="chapter-message">
+            You have found the first clue to the secret message.
+        </p>
+
+        <p class="chapter-fragment">
+            C T S
+        </p>
+
+        <div class="chapter-divider"></div>
+
+        <p class="chapter-whisper">
+            The house has more to say.
+        </p>
+
+        <p class="chapter-whisper">
+            The house is not finished with you.
+        </p>
+
+        <p class="chapter-date">
+            ON THE 8TH OF OCTOBER
+        </p>
+
+        <p class="chapter-whisper">
+            Another door will open.<br>
+            Come back when the house calls.
+        </p>
+
+        <p id="dontLoseClue" class="dont-lose-clue">
+            Do not lose what you found.
+        </p>
+
+    </div>
+
+</section>
+
+
+   <audio id="nightAmbience" preload="auto" loop>
+        <source src="Audio/night-ambience.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="doorCreak" preload="auto">
+        <source src="Audio/door-creak.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="doorSlam" preload="auto">
+        <source src="Audio/door-slam.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="doorLock" preload="auto">
+        <source src="Audio/door-lock.mp3" type="audio/mpeg">
+    </audio>
+    <!-- FOYER AMBIENCE -->
+    <audio id="foyerAmbience" preload="auto" loop>
+        <source src="Audio/foyer-ambience.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- CLOCK TICKING -->
+    <audio id="clockTicking" preload="auto" loop>
+        <source src="Audio/clock-ticking.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- CLOCK MECHANISM CLICK -->
+    <audio id="mechanismClick" preload="auto">
+        <source src="Audio/mechanism-click.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- COMPARTMENT OPEN -->
+    <audio id="compartmentOpen" preload="auto">
+        <source src="Audio/compartment-open.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
