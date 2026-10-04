@@ -9,6 +9,7 @@ const chapterOneComplete =
 const beginButton = document.getElementById("beginButton");
 const warningText = document.getElementById("warningText");
 const foyerIntro = document.getElementById("foyerIntro");
+const foyerHint = document.getElementById("foyerHint");
 const envelopeHotspot = document.getElementById("envelopeHotspot");
 const envelopeModal = document.getElementById("envelopeModal");
 const closeEnvelope = document.getElementById("closeEnvelope");
@@ -222,10 +223,14 @@ beginButton.addEventListener("click", async function () {
     /* Final warning */
 
     foyerIntro.classList.add("visible");
-
     await wait(3000);
-
     foyerIntro.classList.remove("visible");
+
+    await wait(1400);
+
+    foyerHint.classList.add("visible");
+    await wait(4500);
+    foyerHint.classList.remove("visible");
 
 });
 
